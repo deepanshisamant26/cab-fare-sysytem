@@ -1,0 +1,43 @@
+//cab fare system
+import java.util.Scanner;
+class Cab{
+    int fare;
+    Cab()
+    {
+        fare=40;//reservation charge 
+    }
+    void showFare()
+    {
+        System.out.print("Fare amount: "+fare);
+    }
+}
+public class RideCab{
+    public static void main(String args[])
+    {
+        Cab id=new Cab();//whenever you book a ride new id is created
+        Scanner sc=new Scanner(System.in);
+        int d;
+        int d_cab_user;
+        System.out.print("enter the distance from user to cab(in km): ");
+        pickup_dist=sc.nextInt();
+        System.out.print("enter the travel distance(in km): ");
+        d=sc.nextInt();
+        
+        if(d==0)
+        {
+        id.fare+=12*d;    
+        }
+        else
+        {
+            if(d>5)
+          {
+           id.fare=12*d+10;//for each km fare is rs 12
+          }
+          else
+          {
+              id.fare=12*d; 
+          }
+        }
+        id.showFare();
+    }
+}
